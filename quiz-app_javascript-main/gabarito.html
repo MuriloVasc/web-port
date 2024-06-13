@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Tabela HTML Estilizada</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 5px;
+            background-image: url(fundo.png);
+        }
+        
+        
+        table {
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 500px;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #008CCC;
+            color: white;
+            border-radius: 5px 5px 0 0;
+        }
+        
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        button {
+            width: 100%;
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #008CCC;
+            color: white;
+            transition: background 1s;
+        }
+        
+        button:hover {
+            background-color: #6045a0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gabarito</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>questao</th>
+                <th>resposta</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Este tempo verbal é usado para descrever ações que ocorrem no presente. É útil para criar uma sensação de imediatismo e proximidade com a história. Por exemplo: 'Ele caminha pela rua escura.'</td>
+                <td>Presente do Indicativo</td>
+            </tr>
+            <tr>
+                <td>Expressa incerteza, surpresa e indignação, sendo utilizado para se referir a algo que poderia ter acontecido posteriormente a uma situação no passado</td>
+                <td>Futuro do pretérito</td>
+            </tr>
+            <tr>
+                <td>Futuro do presente ...</td>
+                <td>Indica ações que ocorrerão no futuro. Pode ser usado para criar antecipação e expectativa na narrativa</td>
+            </tr>
+            <tr>
+                <td>quais destas frases são 'Pretérito mais-que-perfeito'</td>
+                <td>Visitara aquele álbum de fotos</td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="index.html"><button class="voltar">voltar</button></a>
+</body>
+</html>

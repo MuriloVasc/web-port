@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <a href="#"><img src="LOGO.png" alt="logo"></a>
+    <div class="login">
+        <form action="">
+    <h1>Login - Cadastro</h1>
+    <label>E-mail</label>
+    <input type="text" id="email">
+    <label >Senha</label>
+    <input type="password" id="senha">
+    <button class="button1" type="button" onclick="cadastrar()" id="cadastro">cadastrar</button>
+    <button type="button" onclick="login2()" id="login">login</button>
+</form>
+</div>
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyBzl1BbO0KMRxnt0vYKrVX1swds59b57C0",
+        authDomain: "atividadelogin-6890c.firebaseapp.com",
+        projectId: "atividadelogin-6890c",
+        storageBucket: "atividadelogin-6890c.appspot.com",
+        messagingSenderId: "207402726224",
+        appId: "1:207402726224:web:d81cc95636682f3816b255",
+        
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    var auth = null; // Define a variável auth globalmente
+
+    function cadastrar() {
+        firebase.auth().createUserWithEmailAndPassword(document.getElementById("email").value, document.getElementById("senha").value)
+            .then(function(user) {
+                alert("Cadastrado com sucesso");
+                auth = user;
+            }).catch(function(error) {
+                alert("Falha ao cadastrar");
+            });
+    }
+
+    function login2(){
+        var email =document.getElementById("email").value
+        var senha =document.getElementById("senha").value
+
+        firebase.auth().signInWithEmailAndPassword(email,senha)
+        .then(function(user) {
+                alert("Logado com sucesso");
+                auth = user;
+                window.location.href = "index_inicio.html"; // Redireciona para a página home.html
+            }).catch(function(error) {
+                alert("Falha ao logar: " + error.message);
+            });
+      
+    }
+
+</script>
+</body>
+</html>

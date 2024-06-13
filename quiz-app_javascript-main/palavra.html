@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <title>Caça Palavras Do Português</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+
+    <link rel="stylesheet" type="text/css" href="style1.css">
+
+  </head>
+  <body>
+    
+    <div class="but">
+    </div>
+    <section class="main-content">
+      <div class="box">
+      <div id='puzzle'></div>
+      <div id='words'></div>
+      
+      <div><button id='solve'>Resolver a Caça-Palavras</button></div>
+      <a href="index_inicio.html"><div><button id='solve'>VOLTAR</button></a></div>
+
+        <script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="wordfind.js"></script>
+        <script type="text/javascript" src="wordfindgame.js"></script>
+
+
+        <script>
+  
+          var words = [
+            
+            
+            'aliteração', 'assonância','onomatopeia', 'paranomásia','simples','composta'
+            ];
+
+          // start a word find game
+          var gamePuzzle = wordfindgame.create(words, '#puzzle', '#words');
+
+          $('#solve').click( function() {
+            wordfindgame.solve(gamePuzzle, words);
+          });
+
+          // create just a puzzle, without filling in the blanks and print to console
+          var puzzle = wordfind.newPuzzle( words, {
+            height: 20,
+            width: 20
+          });
+          wordfind.print(puzzle);
+
+        </script>
+
+
+      </footer>
+    </div>
+    </section>
+  
+  </body>
+</html>

@@ -1,0 +1,65 @@
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    background: linear-gradient(90deg, rgb(118, 26, 224) 0%, rgb(121, 243, 64) 100%);
+  }
+
+  h1{
+   color: #ffffff;
+}
+
+button{
+    background-color: #4CAF50;
+    height: 50px; ;
+    width: 55px;
+    border-radius: 0%;
+}
+/* Define a largura da tabela e remove espaçamentos e bordas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Define a borda e o preenchimento das células */
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+/* Estilo do cabeçalho da tabela */
+th {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+}
+
+/* Estilo das linhas pares da tabela */
+tr {
+    background-color: #f2f2f2;
+}
+
+/* Estilo das linhas ao passar o mouse */
+tr:hover {
+    background-color: #ddd;
+}
+
+/* Fonte e espaçamento da tabela */
+table, th, td {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Alinha o texto dentro das células */
+td {
+    text-align: left;
+}
+
+/* Adiciona um pouco de espaçamento ao redor da tabela */
+table {
+    margin-top: 20px;
+}
